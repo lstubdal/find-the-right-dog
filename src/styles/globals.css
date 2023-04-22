@@ -60,3 +60,59 @@ ul > li:hover {
   font-size: 5em;
 }
 
+.logoWrapper, .logo--gold, .hamburger {
+  padding: 10px 25px;
+}
+
+.logo--gold, .hamburger--gold {
+  fill: var(--second);
+}
+
+.hamburger > button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar {
+  height: 100vh;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--overlay);
+}
+
+.sidebar__link {
+  color: var(--light);
+  font-family: var(--second-font);
+  font-size: 1.7em;
+  color: var(--light);
+  text-decoration: none;
+}
+
+.sidebar__link:hover {
+  color: var(--second);
+}
+
+.sidebar__link.active, ul > li.active {
+  color: var(--second);
+}
+
+.sidebar, .sidebar__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.sidebar__close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 50px;
+}
+
+.sidebar__lastItem {
+  border: none;
+}
+
