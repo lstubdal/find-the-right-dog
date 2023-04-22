@@ -1,5 +1,5 @@
 :root {
-  
+
       /* font */
     --main-font: 'Raleway', sans-serif;
     --second-font: 'Philosopher', sans-serif;
@@ -11,7 +11,6 @@
     --dark:  #373737;
     --light: white;
     --overlay: rgba(0,0,0,0.5);
-
 }
 
 /* reset */
@@ -20,4 +19,32 @@
   padding: 0;
   margin: 0;
 }
+
+header {
+  min-height: 12vh;
+  height: 15vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  position: sticky;
+  background-color: transparent;
+}
+
+nav {
+  text-align: end;
+}
+
+ul > li {
+  padding: 40px;
+  border-bottom: 1px solid var(--light);
+  list-style: none;
+  cursor: pointer;
+}
+
+ul > li:hover {
+  border-bottom: 1px solid var(--second);
+}
+
 
