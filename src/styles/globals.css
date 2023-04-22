@@ -1,6 +1,9 @@
-:root {
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600;700;800;900&display=swap');
 
-      /* font */
+:root {
+    /* font */
     --main-font: 'Raleway', sans-serif;
     --second-font: 'Philosopher', sans-serif;
 
