@@ -1,5 +1,7 @@
-import Header from '../components/header/header'
-import styles from '@component/styles/Frontpage.module.css'
+import Header from '../components/header/header';
+import styles from '@component/styles/Frontpage.module.css';
+import Link from 'next/link'
+
 
 export default function Frontpage() {
   return (
@@ -8,9 +10,9 @@ export default function Frontpage() {
      <section className={styles.frontpage__content}>
       <h1 className={styles.frontpage__title}>Find the Best Dog <br/> Breed for You!</h1>
       
-        <div className={styles.frontpage__link}>
+        <Link key="all-breeds" href="/allBreeds" className={styles.frontpage__link}>
           <button className={styles.frontpage__linkButton}>Let's go</button>
-        </div>
+        </Link>
      </section>
     </div>
   );
