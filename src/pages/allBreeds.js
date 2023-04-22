@@ -1,8 +1,11 @@
+import React from "react";
 import { useEffect, useState } from 'react';
 import Header from '../components/header/header';
+import styles from '@component/styles/AllBreeds.module.css'
 
 export default function AllBreeds() {
- /*  const [dogBreeds, setDogBreeds] = useState([]); 
+ 
+  const [dogBreeds, setDogBreeds] = useState([]); 
 
   useEffect(() => {
     
@@ -23,19 +26,19 @@ export default function AllBreeds() {
   }, []); // Empty array means to only run once on mount.
   
   return (
-    <div className="allBreeds">
+    <div className={styles.allBreeds}>
       <Header />
   
       <h2>ALL BREEDS</h2>
-      <main className='allBreeds__grid'>
+      <main className={styles.allBreeds__grid}>
 
         {dogBreeds.map(dog => (
-          <div className="allBreeds__grid-item" key={dog.name}>
+          <div className={styles.allBreeds__gridItem} key={dog.name}>
             <img src={`${dog.image_link}`}  alt={`${dog.name}`}/> 
             <h3>{dog.name}</h3>
           </div>
         ))}
       </main>
     </div>
-  ); */
+  );
 }

@@ -1,0 +1,50 @@
+.allBreeds {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .allBreeds > h2 {
+    font-size: 5em;
+    font-family: var(--second-font);
+    color: var(--second);
+    padding-bottom: 60px;
+  }
+  
+  .allBreeds__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    gap: 40px;
+  }
+  
+  .allBreeds__gridItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 180px;
+    width: 200px;
+    background-color: rgb(250, 250, 250);
+    border-color: var(--dark);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin: 20px 10px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .allBreeds__gridItem > h3 {
+    font-family: var(--main-font);
+    color: var(--second);
+    padding: 20px;
+  }
+  
+  .allBreeds__gridItem > img, .allBreeds__gridItem {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px ;
+  }
+  
+  .allBreeds__gridItem:hover {
+    background-color: var(--dark);
+  }
