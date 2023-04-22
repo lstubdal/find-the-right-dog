@@ -49,11 +49,11 @@ export default function Menu() {
                     </li>
 
                     <li>
-                        <Link key="allBreeds" href="/allBreeds" className="sidebar__link">See all breeds</Link>
+                        <Link key="all-breeds" href="/allBreeds" className="sidebar__link">See all breeds</Link>
                     </li>
 
                     <li>
-                        <Link key="helpPage" href="/helpPage" className="sidebar__link">What is this website?</Link>
+                        <Link key="help-page" href="/helpPage" className="sidebar__link">What is this website?</Link>
                     </li>
 
                     <li>
