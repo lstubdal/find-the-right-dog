@@ -1,15 +1,15 @@
 import Header from '../components/header/header'
-import styles from '@component/styles/Home.module.css'
+import styles from '@component/styles/Frontpage.module.css'
 
 export default function Frontpage() {
   return (
-    <div className='frontpage' style={{ backgroundImage: 'url(/images/background-frontpage.png)' }}>
+    <div className={styles.frontpage} style={{ backgroundImage: 'url(/images/background-frontpage.png)' }}>
      <Header />
-     <section className='frontpage__content'>
-      <h1 className='frontpage__title'>Find the Best Dog <br/> Breed for You!</h1>
+     <section className={styles.frontpage__content}>
+      <h1 className={styles.frontpage__title}>Find the Best Dog <br/> Breed for You!</h1>
       
-        <div className="frontpage__link">
-          <button className='frontpage__link-button'>Let's go</button>
+        <div className={styles.frontpage__link}>
+          <button className={styles.frontpage__linkButton}>Let's go</button>
         </div>
      </section>
     </div>
