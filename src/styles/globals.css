@@ -1,4 +1,16 @@
 :root {
+  
+      /* font */
+    --main-font: 'Raleway', sans-serif;
+    --second-font: 'Philosopher', sans-serif;
+
+    /* colors */
+    --main: #A7B9CE;
+    --second: #C8B89D;
+    --highlight: #DD7D70;
+    --dark:  #373737;
+    --light: white;
+    --overlay: rgba(0,0,0,0.5);
 
 }
 
