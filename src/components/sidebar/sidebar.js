@@ -2,8 +2,11 @@ import React, { useEffect, useRef } from "react";
 import CloseIcon from './closeIcon'
 import { useSelector, useDispatch } from 'react-redux';
 import { toggle } from  '../hamburger/menuSlice';
+import Link from 'next/link'; // create client-side navigation between pages without a full page reload. This component prefetches pages in the background to provide fast navigation.
 
 export default function Menu() {
+
+    // display and hide sidebar
     const displayStatus = useSelector((state) => state.menu.value) 
     const dispatch = useDispatch() 
 
@@ -37,23 +40,24 @@ export default function Menu() {
             <nav>
                 <ul>
                     <li> 
-                        <div  className="sidebar__link">Find breed</div>
+                        {/* className={styles.sidebar__link}  */}
+                        <Link key="find-breed" href="/findBreed" className="sidebar__link" >Find breed</Link>
                     </li>
 
                     <li>
-                        <div className="sidebar__link">Am I ready for a dog?</div>
+                        <Link key="ready-for-a-dog" href="/readyForADog" className="sidebar__link">Am I ready for a dog?</Link>
                     </li>
 
                     <li>
-                        <div className="sidebar__link">See all breeds</div>
+                        <Link key="allBreeds" href="/allBreeds" className="sidebar__link">See all breeds</Link>
                     </li>
 
                     <li>
-                        <div className="sidebar__link">What is this website?</div>
+                        <Link key="helpPage" href="/helpPage" className="sidebar__link">What is this website?</Link>
                     </li>
 
                     <li>
-                        <div className="sidebar__link">Contact</div>
+                        <Link key="contact" href="/contact" className="sidebar__link">Contact</Link>
                     </li>
                 </ul>
             </nav>
