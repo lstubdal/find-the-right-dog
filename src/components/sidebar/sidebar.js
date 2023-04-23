@@ -49,7 +49,7 @@ export default function Menu() {
                     </li>
 
                     <li>
-                        <Link key="all-breeds" href="/allBreeds" className="sidebar__link">See all breeds</Link>
+                        <Link key="all-breeds" href="/allBreeds/allBreeds" className="sidebar__link">See all breeds</Link>
                     </li>
 
                     <li>
