@@ -1,12 +1,9 @@
 import React from "react";
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from "next/router"; // for dynamic routing
-import Header from '../../components/header/header';
 import styles from '@component/styles/AllBreeds.module.css';
 
 export default function AllBreeds() {
-  // const router = useRouter() // router hook
 
   const [dogBreeds, setDogBreeds] = useState([]); 
 
@@ -30,8 +27,6 @@ export default function AllBreeds() {
   
   return (
     <div className={styles.allBreeds}>
-      <Header />
-  
       <h2>ALL BREEDS</h2>
       <main className={styles.allBreeds__grid}>
 

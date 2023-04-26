@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from 'react-redux';
-import { toggle } from '../hamburger/menuSlice'
+import { toggle } from '../../slices/menuSlice'
 
 export default function CloseIcon() {
     const displayStatus = useSelector((state) => state.menu.value) // access variable in menuslice

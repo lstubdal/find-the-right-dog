@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import CloseIcon from './closeIcon'
 import { useSelector, useDispatch } from 'react-redux';
-import { toggle } from  '../hamburger/menuSlice';
+import { toggle } from  '../../slices/menuSlice';
 import Link from 'next/link'; // create client-side navigation between pages without a full page reload. This component prefetches pages in the background to provide fast navigation.
 
 export default function Menu() {

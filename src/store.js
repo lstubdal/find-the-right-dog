@@ -1,10 +1,13 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore } from '@reduxjs/toolkit';
 import { createWrapper } from 'next-redux-wrapper';
-import menuSlice from './components/hamburger/menuSlice'
+import menuSlice from './slices/menuSlice';
+import quizSlice from './slices/quizSlice';
 
 const store = configureStore({
   reducer: {
-    menu: menuSlice // add slice reducer
+    menu: menuSlice, // add slice reducer
+    quiz: quizSlice
+
   },
 })
 
