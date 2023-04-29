@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import Router from 'next/router';
 
 const initialState = {
     index: 0,
@@ -44,7 +45,8 @@ export const quizSlice = createSlice({
 
         increaseIndex(state) {
             if (state.index === state.questions.length -1) {
-                state.index = state.questions.length-1;
+                // go to result page at the end of quiz
+                Router.push('/resultsFindBreed') 
             } else {
                 state.index++;
                 console.log(state.index)
