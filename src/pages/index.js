@@ -8,7 +8,7 @@ export default function Frontpage() {
      <section className={styles.frontpage__content}>
       <h1 className={styles.frontpage__title}>Find the Best Dog <br/> Breed for You!</h1>
       
-        <Link key="all-breeds" href="/allBreeds" className={styles.frontpage__link}>
+        <Link key="all-breeds" href="/findBreed" className={styles.frontpage__link}>
           <button className={styles.frontpage__linkButton}>Let's go</button>
         </Link>
      </section>
