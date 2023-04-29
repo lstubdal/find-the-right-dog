@@ -3,29 +3,26 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     index: 0,
     questions: [
-        {   
+        { // size
             id: 0,
-            question: 'question A',
-            option1: 1,
-            option2: 2,
-            option3: 3,
-            option4: 4,
+            question: 'What size do you prefer?',
+            option1: 'Small',
+            option2: 'Medium',
+            option3: 'Large',
         },
-        {   
+        { // energy
             id: 1,
-            question: 'question B',
-            option1: 1,
-            option2: 2,
-            option3: 3,
-            option4: 4,
+            question: 'How much activity will your dog get?',
+            option1: 'Bare minimum (leash walks everyday)',
+            option2: 'Longer walks once or a few time a week',
+            option3: 'Long walks/jogs almost or up to everyday',
         },
-        {   
+        { // good with children
             id: 2,
-            question: 'question C',
-            option1: 1,
-            option2: 2,
-            option3: 3,
-            option4: 4,
+            question: 'Will the dog be living with children?',
+            option1: 'No, not planning either',
+            option2: 'Do not have children yet',
+            option3: 'Yes, with children',
         },
     ],
 
@@ -46,12 +43,20 @@ export const quizSlice = createSlice({
         },
 
         increaseIndex(state) {
-            state.index++;
+            if (state.index === state.questions.length -1) {
+                state.index = state.questions.length-1;
+            } else {
+                state.index++;
+                console.log(state.index)
+                console.log('length', state.questions.length)
+            }
         },
 
         decreaseIndex(state) {
-            if (state.index >= 0) {
+            if (state.index > 0) {
                 state.index--;
+            } else {
+                state.index = 0;
             }
         }
     }
