@@ -5,33 +5,35 @@ const initialState = {
     index: 0,
     questions: [
         { // size
-            id: 0,
+            id: 'size',
             question: 'What size do you prefer?',
-            option1: 'Small',
-            option2: 'Medium',
-            option3: 'Large',
+            options: [
+                {option: 'small'},
+                {option: 'medium'},
+                {option: 'large'}
+            ]
         },
         { // energy
-            id: 1,
+            id: 'energy',
             question: 'How much activity will your dog get?',
-            option1: 'Bare minimum (leash walks everyday)',
-            option2: 'Longer walks once or a few time a week',
-            option3: 'Long walks/jogs almost or up to everyday',
+            options: [
+                {option: 'Bare minimum (leash walks everyday)'},
+                {option: 'Longer walks once or a few time a week'},
+                {option: 'Long walks/jogs almost or up to everyday'},
+            ]
         },
         { // good with children
-            id: 2,
+            id: 'good_with_children',
             question: 'Will the dog be living with children?',
-            option1: 'No, not planning either',
-            option2: 'Do not have children yet',
-            option3: 'Yes, with children',
+            options: [
+                {option: 'No, not planning either'},
+                {option: 'Do not have children yet'},
+                {option: 'Yes, with children'},
+            ]
         },
     ],
 
-    answers: [
-        {
-            input: '',
-        }
-    ]
+    answers: []
 }
 
 export const quizSlice = createSlice({
@@ -39,8 +41,17 @@ export const quizSlice = createSlice({
     initialState,
     reducers: {
 
-        updateAnswer: (state, index, answer) => {
-            return state.answers[index].input = answer;
+        updateAnswer: (state, answer) => {
+            const currentAnswer = {
+                id: state.questions[state.index].id,
+                answer: answer 
+            }
+
+            state.answers.push(currentAnswer)
+            console.log(currentAnswer)
+            console.log('arrary answers', state.answers.length)
+            console.log('ANSWERS ID', state.answers[state.index].id);
+            console.log('ANSWER', state.answers[state.index].answer.payload);
         },
 
         increaseIndex(state) {

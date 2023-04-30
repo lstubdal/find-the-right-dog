@@ -1,42 +1,79 @@
 import React, { use } from "react";
 import { useSelector, useDispatch } from 'react-redux';
 import styles from '@component/styles/FindBreed.module.css';
-import { decreaseIndex, increaseIndex } from "@component/slices/quizSlice";
+import { decreaseIndex, increaseIndex, updateAnswer } from "@component/slices/quizSlice";
 import { useState } from 'react';
 
 export default function FindBreed() {
+     // make reducers accessbible to current component
+     const dispatch = useDispatch();
 
     // access slice from redux 
     const index = useSelector((state) => state.quiz.index); 
     const questions = useSelector((state) => state.quiz.questions); 
 
+    const checkboxes = [
+        { id: '0-1', isChecked: false },
+        { id: '2-3', isChecked: false },
+        { id: '4-5', isChecked: false }
+    ]
+
+    // update value after users input
     // soure: chatGPT
+    const [checkboxValues, setCheckboxValues] = useState(checkboxes)
+
+    function changeCheckboxValue(id) {
+        const updatedCheckboxValues = checkboxValues.map((checkbox) =>
+            checkbox.id === id ? { 
+                ...checkbox, isChecked: !checkbox.isChecked 
+            } : checkbox
+        );
+        setCheckboxValues(updatedCheckboxValues) // update changes on checkbox
+    }
+
     // make sure user clicks one option, also no more than one
-    const [isChecked1, setIsChecked1] = useState(false);
-    const [isChecked2, setIsChecked2] = useState(false);
-    const [isChecked3, setIsChecked3] = useState(false);
     const [errorMessage, setErrorMessage] = useState(null);
 
     function checkInputFields() {
         // if no options is selected
-        if (!isChecked1 && !isChecked2 && !isChecked3) {
-            console.log('error message triggered')
+        let counter = 0;
+        checkboxValues.map((checkbox) => {
+            if (!checkbox.isChecked) {counter++;}
+        })
+
+        if (counter === 3) {
             setErrorMessage("Please select one option!")
             return false
+
         } else {
+            console.log('all good')
+            
+            // update current answer to redux then 
+            checkboxValues.map((checkbox) => {
+                if (checkbox.isChecked) {
+                    dispatch(updateAnswer(checkbox.id))
+                }
+                //checkbox.isChecked = false // reset values
+            })
+
+            //setCheckboxValues(resetCheckboxes)
+            setErrorMessage(null);
+            return true
+        }
+
+       /*  } else {
             // reset input values again
             setIsChecked1(false);
             setIsChecked2(false);
             setIsChecked3(false);
             setErrorMessage(null)
+            //dispatch(updateAnswer('test answer'))
             return true
-        }
+        } */
+
         // if two or more is selected
         
-    }
-
-    // make reducers accessbible to current component
-    const dispatch = useDispatch();
+    } 
 
     return(
         <div className={styles.findBreed}>
@@ -47,21 +84,36 @@ export default function FindBreed() {
                 <p>Question {index + 1}/10</p>
                 <h3>{questions[index].question}</h3>
 
-                <div>
-                    <input type="checkbox" name="low" checked={isChecked1} onChange={event => setIsChecked1(event.target.checked)}/>
-                    <label htmlFor="low">{questions[index].option1}</label>
+            
+                {checkboxValues.map((checkbox, i) => (
+                <label key={checkbox.id}>
+                    <input
+                    type="checkbox"
+                    checked={checkbox.isChecked}
+                    /* onChange={event => checkboxValues[i].isChecked = event.target.checked} */
+                    onChange={() => changeCheckboxValue(checkbox.id)}
+                    />
+                    {questions[index].options[i].option}
+                </label>
+                ))}
 
-                    <input type="checkbox" name="medium"checked={isChecked2} onChange={event => setIsChecked2(event.target.checked)}/>
+                {/* <div>
+                    <input type="checkbox" name="low" checked={checkboxValues[0].isChecked} onChange={checkboxValues[0].isChecked = true} />
+                    <label htmlFor="low">{questions[index].option1}</label>
+                    
+
+                    <input type="checkbox" name="medium" checked={checkboxValues[1].isChecked} />
                     <label htmlFor="medium">{questions[index].option2}</label>
 
-                    <input type="checkbox" name="high" checked={isChecked3} onChange={event => setIsChecked3(event.target.checked)}/>
+                    <input type="checkbox" name="high" checked={checkboxValues[2].isChecked} />
                     <label htmlFor="high">{questions[index].option3}</label>
-                </div>
+                </div> */}
 
                 {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
 
                 <div>
                     <button onClick={() => dispatch(decreaseIndex())}>back</button>
+                    {/* <button onClick={() => checkInputFields()}>next</button> */}
                     <button onClick={() => checkInputFields() === false ? '' : dispatch(increaseIndex())}>next</button>
                 </div>
 
