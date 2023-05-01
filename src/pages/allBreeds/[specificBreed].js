@@ -83,7 +83,7 @@ const SpecificBreed = ({ specificBreed })  => {
 export default SpecificBreed;
 
 export async function getStaticPaths() {
-    const url = 'https://gist.githubusercontent.com/lstubdal/cb98091b7b0083a9c31f4133cbbde2ca/raw/3ae4234e50588bf196d8bc433aedf7167b7190a9/gistfile1.txt';
+    const url = 'https://gist.githubusercontent.com/lstubdal/7c7161c4779b0fc49ffe81414f4c8854/raw/5d1ae39d9bbb6591cb9abb71e3dd290ec13c651f/dogbreeds.json';
     const response = await fetch(url);
     const allBreeds = await response.json()
 
