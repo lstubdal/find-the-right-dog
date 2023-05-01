@@ -35,7 +35,7 @@ export default function FindBreed() {
     const [errorMessage, setErrorMessage] = useState(null);
 
     function checkInputFields() {
-        // if no options is selected
+        // handle if no option selected
         let counter = 0;
         checkboxValues.map((checkbox) => {
             if (!checkbox.isChecked) {counter++;}
@@ -46,47 +46,23 @@ export default function FindBreed() {
             return false
 
         } else {
-            console.log('all good')
-            
             // update current answer to redux then 
             checkboxValues.map((checkbox) => {
                 if (checkbox.isChecked) {
-
-                    const payload = {
-                        id: questions[index].id,
-                        answer: checkbox.id
-                    }
-                    console.log(payload.id)
-                    console.log(payload.answer)
-                  /*   console.log(checkbox.id)
-                    console.log('questions id', questions[index].id) */
-
                     dispatch(updateAnswer({
                         id: questions[index].id,
                         answer: checkbox.id
 
                     }))
-                    checkbox.isChecked = false // reset values
+                    // reset value for next question
+                    checkbox.isChecked = false 
                 }
             })
 
-            //setCheckboxValues(resetCheckboxes)
             setErrorMessage(null);
             return true
         }
-
-       /*  } else {
-            // reset input values again
-            setIsChecked1(false);
-            setIsChecked2(false);
-            setIsChecked3(false);
-            setErrorMessage(null)
-            //dispatch(updateAnswer('test answer'))
-            return true
-        } */
-
         // if two or more is selected
-        
     } 
 
     return(
@@ -104,24 +80,11 @@ export default function FindBreed() {
                     <input
                     type="checkbox"
                     checked={checkbox.isChecked}
-                    /* onChange={event => checkboxValues[i].isChecked = event.target.checked} */
                     onChange={() => changeCheckboxValue(checkbox.id)}
                     />
                     {questions[index].options[i].option}
                 </label>
                 ))}
-
-                {/* <div>
-                    <input type="checkbox" name="low" checked={checkboxValues[0].isChecked} onChange={checkboxValues[0].isChecked = true} />
-                    <label htmlFor="low">{questions[index].option1}</label>
-                    
-
-                    <input type="checkbox" name="medium" checked={checkboxValues[1].isChecked} />
-                    <label htmlFor="medium">{questions[index].option2}</label>
-
-                    <input type="checkbox" name="high" checked={checkboxValues[2].isChecked} />
-                    <label htmlFor="high">{questions[index].option3}</label>
-                </div> */}
 
                 {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
 
@@ -135,17 +98,3 @@ export default function FindBreed() {
         </div>
     )
 }
-
-/* 
-
-Layout for questions?
-Slice for answers 
-
-OR index, index ++
-
-last question => href to result page? fetch with results
-
-    0-1 => low
-    2-3 => medium
-    4-5 => high
-*/

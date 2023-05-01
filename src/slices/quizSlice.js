@@ -42,28 +42,25 @@ export const quizSlice = createSlice({
     reducers: {
 
         updateAnswer: (state, action) => {
-
-            
-            // if user clicked bach and changed answer 
+            // create object of current answer
             const currentAnswer = {
                 id: action.payload.id,
                 answer: action.payload.answer
             } 
 
-            console.log('ca',currentAnswer.id)
-            console.log('ca',  currentAnswer.answer)
-            
+            // add the first answer
+            if (state.answers.length === 0) {
+                state.answers.push(currentAnswer);
+            } else {
 
-            state.answers.push(currentAnswer)
-           state.answers.forEach(q => {
-            console.log('hei id', q.id)
-            console.log('hei', q.answer)
-           })
-
-            
-            console.log('arrary answers', state.answers.length)
-            console.log('ANSWERS ID', state.answers[state.index].id);
-            console.log('ANSWER', state.answers[state.index].answer);
+                 // handle if user goes back and changes answer
+                const answerExists = state.answers.some(answer => answer.id === action.payload.id);
+                if (answerExists) {
+                    state.answers[state.index].answer = action.payload.answer;
+                } else {
+                    state.answers.push(currentAnswer);
+                }
+            }
         },
 
         increaseIndex(state) {
