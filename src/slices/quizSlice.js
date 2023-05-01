@@ -41,17 +41,29 @@ export const quizSlice = createSlice({
     initialState,
     reducers: {
 
-        updateAnswer: (state, answer) => {
+        updateAnswer: (state, action) => {
+
+            
+            // if user clicked bach and changed answer 
             const currentAnswer = {
-                id: state.questions[state.index].id,
-                answer: answer 
-            }
+                id: action.payload.id,
+                answer: action.payload.answer
+            } 
+
+            console.log('ca',currentAnswer.id)
+            console.log('ca',  currentAnswer.answer)
+            
 
             state.answers.push(currentAnswer)
-            console.log(currentAnswer)
+           state.answers.forEach(q => {
+            console.log('hei id', q.id)
+            console.log('hei', q.answer)
+           })
+
+            
             console.log('arrary answers', state.answers.length)
             console.log('ANSWERS ID', state.answers[state.index].id);
-            console.log('ANSWER', state.answers[state.index].answer.payload);
+            console.log('ANSWER', state.answers[state.index].answer);
         },
 
         increaseIndex(state) {
@@ -60,8 +72,6 @@ export const quizSlice = createSlice({
                 Router.push('/resultsFindBreed') 
             } else {
                 state.index++;
-                console.log(state.index)
-                console.log('length', state.questions.length)
             }
         },
 

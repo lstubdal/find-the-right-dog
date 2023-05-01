@@ -1,4 +1,4 @@
-import React, { use } from "react";
+import React from "react";
 import { useSelector, useDispatch } from 'react-redux';
 import styles from '@component/styles/FindBreed.module.css';
 import { decreaseIndex, increaseIndex, updateAnswer } from "@component/slices/quizSlice";
@@ -51,9 +51,23 @@ export default function FindBreed() {
             // update current answer to redux then 
             checkboxValues.map((checkbox) => {
                 if (checkbox.isChecked) {
-                    dispatch(updateAnswer(checkbox.id))
+
+                    const payload = {
+                        id: questions[index].id,
+                        answer: checkbox.id
+                    }
+                    console.log(payload.id)
+                    console.log(payload.answer)
+                  /*   console.log(checkbox.id)
+                    console.log('questions id', questions[index].id) */
+
+                    dispatch(updateAnswer({
+                        id: questions[index].id,
+                        answer: checkbox.id
+
+                    }))
+                    checkbox.isChecked = false // reset values
                 }
-                //checkbox.isChecked = false // reset values
             })
 
             //setCheckboxValues(resetCheckboxes)
