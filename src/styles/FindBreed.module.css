@@ -1,0 +1,75 @@
+.findBreed, .quiz {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.findBreed{
+    font-family: var(--second-font);
+}
+
+.findBreed h2, .findBreed__description {
+    text-align: center;
+    width: 100%;
+    color: var(--dark);
+    position: sticky;
+}
+
+.findBreed h2 {
+    font-size: 3.2em;
+}
+
+.findBreed__description {
+    font-size: 1.5em;
+    padding-top: 20px;
+    font-family: var(--main-font);
+    padding-bottom: 50px;
+}
+
+.findBreed h3 {
+    font-size: 2.2em
+}
+
+.quiz {
+    height: 100%;
+    width: 60%;
+    background-color: var(--main);
+    padding: 70px 100px;
+    border-radius: 10px;
+}
+
+.quiz p {
+    font-size: 1.5em;
+    font-family: var(--main-font);
+    color: var(--light);
+    padding: 10px;
+}
+
+.quiz__questions {
+    display: flex;
+}
+
+.quiz__button, .quiz__buttonBack {
+    font-size: 1.7em;
+    padding: 3px 35px;
+    border: 2px solid var(--main);
+    border-radius: 10px;
+    margin: 20px 10px 20px 10px;
+}
+
+.quiz__button:hover, .quiz__buttonBack:hover {
+    background-color: var(--second);
+    color: var(--light);
+    border: 2px solid var(--light);
+}
+
+.quiz__button {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.quiz__buttonBack {
+    background-color: var(--light);
+}
+

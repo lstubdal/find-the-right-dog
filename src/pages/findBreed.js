@@ -1,8 +1,8 @@
 import React from "react";
 import { useSelector, useDispatch } from 'react-redux';
-import styles from '@component/styles/FindBreed.module.css';
 import { decreaseIndex, increaseIndex, updateAnswer } from "@component/slices/quizSlice";
 import { useState } from 'react';
+import styles from '@component/styles/FindBreed.module.css';
 
 export default function FindBreed() {
      // make reducers accessbible to current component
@@ -42,7 +42,7 @@ export default function FindBreed() {
         })
 
         if (counter === 3) {
-            setErrorMessage("Please select one option!")
+            setErrorMessage("Please select one option")
             return false
 
         } else {
@@ -68,30 +68,31 @@ export default function FindBreed() {
     return(
         <div className={styles.findBreed}>
             <h2>DOG BREED SELECTOR</h2>
-            <p>Answer a few questions about your expections of your future four legged friend</p>
+            <p className={styles.findBreed__description}>Answer a few questions about your expections of your future four legged friend</p>
 
             <section className={styles.quiz}>
                 <p>Question {index + 1}/10</p>
                 <h3>{questions[index].question}</h3>
 
             
-                {checkboxValues.map((checkbox, i) => (
-                <label key={checkbox.id}>
-                    <input
-                    type="checkbox"
-                    checked={checkbox.isChecked}
-                    onChange={() => changeCheckboxValue(checkbox.id)}
-                    />
-                    {questions[index].options[i].option}
-                </label>
-                ))}
+                <div className={styles.quiz__questions}>{checkboxValues.map((checkbox, i) => (
+                    <label key={checkbox.id}>
+                        <input
+                        type="checkbox"
+                        checked={checkbox.isChecked}
+                        onChange={() => changeCheckboxValue(checkbox.id)}
+                        />
+                        {questions[index].options[i].option}
+                    </label>
+                    ))}
+                    
+                </div>
 
-                {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+                {errorMessage && <p style={{ color: 'darkred' }}>{errorMessage}</p>}
 
                 <div>
-                    <button onClick={() => dispatch(decreaseIndex())}>back</button>
-                    {/* <button onClick={() => checkInputFields()}>next</button> */}
-                    <button onClick={() => checkInputFields() === false ? '' : dispatch(increaseIndex())}>next</button>
+                    <button className={styles.quiz__buttonBack} onClick={() => dispatch(decreaseIndex())}>Back</button>
+                    <button className={styles.quiz__button} onClick={() => checkInputFields() === false ? '' : dispatch(increaseIndex())}>Next</button>
                 </div>
 
             </section>
