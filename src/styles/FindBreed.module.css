@@ -28,14 +28,15 @@
 }
 
 .findBreed h3 {
-    font-size: 2.2em
+    font-size: 2.2em;
+    padding: 20px;
 }
 
 .quiz {
     height: 100%;
-    width: 60%;
+    width: 70%;
     background-color: var(--main);
-    padding: 70px 100px;
+    padding: 70px;
     border-radius: 10px;
 }
 
@@ -48,6 +49,7 @@
 
 .quiz__questions {
     display: flex;
+    flex-direction: column;
 }
 
 .quiz__button, .quiz__buttonBack {
@@ -55,7 +57,7 @@
     padding: 3px 35px;
     border: 2px solid var(--main);
     border-radius: 10px;
-    margin: 20px 10px 20px 10px;
+    margin: 40px 10px 20px 10px;
 }
 
 .quiz__button:hover, .quiz__buttonBack:hover {

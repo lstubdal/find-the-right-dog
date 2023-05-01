@@ -6,11 +6,11 @@ const initialState = {
     questions: [
         { // size
             id: 'size',
-            question: 'What size do you prefer?',
+            question: 'What size do you prefer your dog to be?',
             options: [
-                {option: 'small'},
-                {option: 'medium'},
-                {option: 'large'}
+                {option: 'A small sized dog'},
+                {option: 'A medium sized dog'},
+                {option: 'A large sized dog'}
             ]
         },
         { // energy
