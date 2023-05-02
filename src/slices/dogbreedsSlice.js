@@ -1,19 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    dogbreeds: []   
+    allBreeds: []   
 }
 
-export const dogbreedsSlice = createSlice({
-    name: 'dogbreeds',
+export const dogBreedsSlice = createSlice({
+    name: 'dogBreeds',
     initialState,
     reducers: {
-        filter: (state) => {
-           // filter based dogbreeds
+        addAllBreeds: (state, dog) => {
+           state.allBreeds.push(dog)
         }
     }
 })
 
-export const { filter } = dogbreedsSlice.actions; // Action creator for the reducer
+export const { addAllBreeds } = dogBreedsSlice.actions; // Action creator for the reducer
 
-export default dogbreedsSlice.reducer;
+export default dogBreedsSlice.reducer;
