@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import styles from '@component/styles/AllBreeds.module.css';
+import Header from '../components/header/header';
 
 export default function AllBreeds() {
 
@@ -23,10 +24,11 @@ export default function AllBreeds() {
       }    
     }
     fetchData()
-  }, []); // Empty array means to only run once on mount.
+  }, []); // only run once on mount.
   
   return (
     <div className={styles.allBreeds}>
+      <Header />
       <h2>ALL BREEDS</h2>
       <main className={styles.allBreeds__grid}>
 

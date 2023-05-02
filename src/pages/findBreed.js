@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { decreaseIndex, increaseIndex, updateAnswer } from "@component/slices/quizSlice";
 import { useState } from 'react';
 import styles from '@component/styles/FindBreed.module.css';
+import Header from '../components/header/header';
 
 export default function FindBreed() {
      // make reducers accessbible to current component
@@ -67,6 +68,7 @@ export default function FindBreed() {
 
     return(
         <div className={styles.findBreed}>
+            <Header />
             <h2>DOG BREED SELECTOR</h2>
             <p className={styles.findBreed__description}>Answer a few questions about your expections of your future four legged friend</p>
 
