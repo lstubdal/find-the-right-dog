@@ -7,7 +7,6 @@ import { toggle } from '../../slices/menuSlice';
 export default function Hamburger() {
     const displayStatus = useSelector((state) => state.menu.value) // access variable in menuslice
     const dispatch = useDispatch() 
-    console.log('---STATUS---HAMBURGER', displayStatus)
    
     return (
         // hide menu if hamburger not clicked
@@ -18,7 +17,6 @@ export default function Hamburger() {
             </button>
             ) : <Sidebar /> 
         }
-        
         </div>
     )
 }

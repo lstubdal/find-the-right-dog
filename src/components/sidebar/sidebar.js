@@ -40,7 +40,6 @@ export default function Menu() {
             <nav>
                 <ul>
                     <li> 
-                        {/* className={styles.sidebar__link}  */}
                         <Link key="find-breed" href="/findBreed" className="sidebar__link" >Find breed</Link>
                     </li>
 
@@ -49,15 +48,11 @@ export default function Menu() {
                     </li>
 
                     <li>
-                        <Link key="all-breeds" href="/allBreeds/allBreeds" className="sidebar__link">See all breeds</Link>
+                        <Link key="all-breeds" href="/allBreeds" className="sidebar__link">See all breeds</Link>
                     </li>
 
                     <li>
                         <Link key="help-page" href="/helpPage" className="sidebar__link">What is this website?</Link>
-                    </li>
-
-                    <li>
-                        <Link key="contact" href="/contact" className="sidebar__link">Contact</Link>
                     </li>
                 </ul>
             </nav>

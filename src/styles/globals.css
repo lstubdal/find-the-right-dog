@@ -24,18 +24,19 @@
 }
 
 header {
-  min-height: 12vh;
-  height: 15vh;
+  min-height: 10vh;
+  height: 12vh;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   top: 0;
   position: sticky;
-  /* background-color: var(--dark); */
+  background: transparent;
 }
 
 nav {
+  padding-top: 30px;
   text-align: end;
 }
 
@@ -59,7 +60,6 @@ footer {
   color: var(--second);
   font-family: var(--main-font);
   padding: 30px;
-  margin-top: 100px;
   border-top:2px solid var(--second);
 }
 

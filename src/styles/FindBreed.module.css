@@ -38,6 +38,7 @@
     background-color: var(--main);
     padding: 70px;
     border-radius: 10px;
+    margin-bottom: 100px;
 }
 
 .quiz p {
