@@ -5,9 +5,20 @@ import styles from '@component/styles/AllBreeds.module.css';
 import Header from '../components/header/header';
 
 export default function AllBreeds() {
-  //const allBreeds = useSelector((state) => state.dogBreeds.allBreeds) // access all breeds from store
-  //console.log('all breeds page', allBreeds)
+  const allBreeds = useSelector((state) => state.fetchedData.data) // access all breeds from store
+  const isLoading = useSelector((state) => state.isLoading);
 
+  if (isLoading) {
+    // Render a loading indicator
+    return <div>Loading...</div>;
+  }
+
+  if (!allBreeds) {
+    // Render a placeholder component
+    return <div>No data available</div>;
+  }
+
+  // Render the component that uses the data
   return (
     <div className={styles.allBreeds}>
       <Header />
