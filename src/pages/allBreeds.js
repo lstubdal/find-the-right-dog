@@ -1,39 +1,12 @@
-import React, { use } from "react";
-import { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { addAllBreeds } from "@component/slices/dogBreedsSlice";
+import React from "react";
+import { useSelector } from 'react-redux';
 import Link from 'next/link';
 import styles from '@component/styles/AllBreeds.module.css';
 import Header from '../components/header/header';
 
 export default function AllBreeds() {
-  const dogbreedsStore =  useSelector((state) => state.allBreeds)
-  const dispatch = useDispatch();
-  const [dogBreeds, setDogBreeds] = useState([]); 
-
-
-  useEffect(() => {
-    
-    // fetch dogbreeds from json file in github gist
-    const url = 'https://gist.githubusercontent.com/lstubdal/7c7161c4779b0fc49ffe81414f4c8854/raw/5d1ae39d9bbb6591cb9abb71e3dd290ec13c651f/dogbreeds.json';
-    const fetchData = async () =>  {
-
-      try {
-        const response = await fetch(url)
-        const data = await response.json() // parse data to json format    
-        setDogBreeds(data) // update state to 'dogbreed' variable
-       
-      } catch(error) {
-        console.log('error', error)
-      }    
-    }
-    fetchData()
-  }, []); // only run once on mount.
-
-  // add all dogbreeds to store
-  dogBreeds.forEach(dog => {
-    dispatch(addAllBreeds(dog))
-  })
+  //const allBreeds = useSelector((state) => state.dogBreeds.allBreeds) // access all breeds from store
+  //console.log('all breeds page', allBreeds)
 
   return (
     <div className={styles.allBreeds}>
@@ -41,7 +14,7 @@ export default function AllBreeds() {
       <h2>ALL BREEDS</h2>
       <main className={styles.allBreeds__grid}>
 
-        {dogBreeds.map(dog => (
+        {allBreeds.map(dog => (
           <Link key={dog.name} href={`/allBreeds/${dog.name}`} className={styles.allBreeds__gridItem}>
             <img src={`${dog.image_link}`}  alt={`${dog.name}`}/> 
             <h3>{dog.name}</h3>

@@ -1,15 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    allBreeds: []   
+    allBreeds: []  // get data from fethcing
 }
 
 export const dogBreedsSlice = createSlice({
     name: 'dogBreeds',
     initialState,
     reducers: {
-        addAllBreeds: (state, dog) => {
-           state.allBreeds.push(dog)
+        addAllBreeds: (state, action) => {
+           state.allBreeds = action.payload;
         }
     }
 })
