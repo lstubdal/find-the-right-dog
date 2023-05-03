@@ -1,11 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { createWrapper } from 'next-redux-wrapper';
 import thunkMiddleware from 'redux-thunk';
-// import fetchedData, {setData} from './slices/fetchDataSlice';
 import fetchDataSlice, { setData } from './slices/fetchDataSlice';
 import menuSlice from './slices/menuSlice';
 import quizSlice from './slices/quizSlice';
-import dogBreedsSlice from './slices/dogBreedsSlice';
 
 // source: chatGPT
 // fetch all dogbreeds from git gist json file
@@ -33,7 +31,6 @@ const store = configureStore({
   reducer: {
     menu: menuSlice, 
     quiz: quizSlice,
-    dogreeds: dogBreedsSlice,
     fetchedData: fetchDataSlice
   },
 
