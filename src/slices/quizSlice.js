@@ -151,7 +151,7 @@ export const quizSlice = createSlice({
         increaseIndex(state) {
             if (state.index === state.questions.length -1) {
                 // go to result page at the end of quiz
-                Router.push('/resultsFindBreed') 
+                Router.push('/results') 
             } else {
                 state.index++;
             }
