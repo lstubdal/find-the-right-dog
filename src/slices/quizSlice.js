@@ -8,9 +8,11 @@ const initialState = {
             id: 'size',
             question: 'What size do you prefer your dog to be?',
             options: [
-                {option: 'A small sized dog'},
-                {option: 'A medium sized dog'},
-                {option: 'A large sized dog'}
+                {option: 'A mini sized dog (15 LBS and under)'},
+                {option: 'A small sized dog (15-30 LBS)'},
+                {option: 'A medium sized dog (30-50 LBS)'},
+                {option: 'A large sized dog (50-110 LBS)'},
+                {option: 'A extra large sized dog (110 LBS and over)'}
             ]
         },
         { // energy
@@ -18,7 +20,9 @@ const initialState = {
             question: 'How much activity will your dog get?',
             options: [
                 {option: 'Bare minimum (leash walks everyday)'},
-                {option: 'Longer walks once or a few time a week'},
+                {option: 'Long walks every now and then'},
+                {option: 'Long walks once a week'},
+                {option: 'Long walks 2-4 a week'},
                 {option: 'Long walks/jogs almost or up to everyday'},
             ]
         },
@@ -28,7 +32,9 @@ const initialState = {
             options: [
                 {option: 'No, not planning either'},
                 {option: 'Do not have children yet'},
-                {option: 'Yes, with children'},
+                {option: 'Yes, with children over 12'},
+                {option: 'Yes, with children under and over 12'},
+                {option: 'Yes, with children under 12'},
             ]
         },
         { // good_with_other_dogs
@@ -37,7 +43,9 @@ const initialState = {
             options: [
                 {option: 'Not that important'},
                 {option: 'Matters a little'},
+                {option: 'It matters'},
                 {option: 'Yes, important'},
+                {option: 'Yes, very important'}
             ]
         },
         { //good_with_strangers
@@ -46,16 +54,22 @@ const initialState = {
             options: [
                 {option: 'Not that important'},
                 {option: 'Matters a little'},
+                {option: 'It matters'},
                 {option: 'Yes, important'},
+                {option: 'Yes, very important'}
+                
             ]
         },
         { // playfullness
             id: 'playfullness',
             question: 'How much will your dog be able to play with you?',
             options: [
-                {option: 'Once a week or less'},
-                {option: 'Around 2-4 days a week'},
-                {option: 'Everyday or more'},
+                {option: 'Not much at all'},
+                {option: 'Every now and then'},
+                {option: 'Once or twice a week'},
+                {option: 'Three or four times a week'},
+                {option: 'Up to everyday'},
+                
             ]
         },
         { // independence
@@ -63,16 +77,20 @@ const initialState = {
             question: 'Will your dog spend much time alone on daily basis?',
             options: [
                 {option: 'It will be with someone most of the time'},
-                {option: 'Around 4-6 hours'},
-                {option: 'Until i get home from work (8hours+)'},
+                {option: 'Around 4 hours'},
+                {option: 'Around 6 hours'},
+                {option: 'Until i get home from work (8hours)'},
+                {option: 'More than 8 hours'},
             ]
         },
         { // trainability
             id: 'trainability',
             question: 'How trainable do you want your dog to be',
             options: [
-                {option: 'Not that important'},
+                {option: 'May be stubborn'},
+                {option: 'Less easy trainable'},
                 {option: 'I prefer trainabile'},
+                {option: 'Easily trainable'},
                 {option: 'Highly trainabile'},
             ]
         },
@@ -81,7 +99,9 @@ const initialState = {
             question: 'How much time will you have for grooming?',
             options: [
                 {option: 'Not much time'},
-                {option: 'Every so often'},
+                {option: 'Every now and then'},
+                {option: 'Once or twice a week'},
+                {option: 'Three or four times a week'},
                 {option: 'Daily grooming'},
             ]
         },
@@ -89,9 +109,11 @@ const initialState = {
             id: 'shedding',
             question: 'How much shedding are you okay with?',
             options: [
+                {option: 'Not that important'},
                 {option: 'Minimal shedding'},
                 {option: 'Some shedding is okay'},
-                {option: 'Not important'},
+                {option: 'Shedding is okay'},
+                {option: 'A lot of shedding is okay'},
             ]
         }
     ],

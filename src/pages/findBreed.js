@@ -14,9 +14,11 @@ export default function FindBreed() {
     const questions = useSelector((state) => state.quiz.questions); 
 
     const checkboxes = [
-        { id: '0-1', isChecked: false },
-        { id: '2-3', isChecked: false },
-        { id: '4-5', isChecked: false }
+        { id: '1', isChecked: false },
+        { id: '2', isChecked: false },
+        { id: '3', isChecked: false },
+        { id: '4', isChecked: false },
+        { id: '5', isChecked: false }
     ]
 
     // update value after users input
