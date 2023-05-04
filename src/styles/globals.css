@@ -89,8 +89,9 @@ input[type="checkbox"]:checked::before {
 }
 
 label {
+  font-family: var(--main-font);
   display: flex;
-  font-size: 1.8em;
+  font-size: 1.7em;
   align-items: center;
   padding: 20px 35px;
 }
@@ -166,4 +167,12 @@ label {
   border: none;
 }
 
+
+@media screen and (max-width: 700px) {
+  label {
+    font-size: 1.3em;
+    padding: 10px 35px;
+
+  }
+}
 
