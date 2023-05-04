@@ -8,7 +8,7 @@ const initialState = {
             id: 'size',
             question: 'What size do you prefer your dog to be?',
             options: [
-                {option: 'A mini sized dog (15 LBS and under)'},
+                {option: 'Not important'},
                 {option: 'A small sized dog (15-30 LBS)'},
                 {option: 'A medium sized dog (30-50 LBS)'},
                 {option: 'A large sized dog (50-110 LBS)'},
@@ -26,7 +26,7 @@ const initialState = {
                 {option: 'Long walks/jogs almost or up to everyday'},
             ]
         },
-        { // good with children
+        { // good_with_children
             id: 'good_with_children',
             question: 'Will the dog be living with children?',
             options: [
@@ -60,8 +60,8 @@ const initialState = {
                 
             ]
         },
-        { // playfullness
-            id: 'playfullness',
+        { // playfulness
+            id: 'playfulness',
             question: 'How much will your dog be able to play with you?',
             options: [
                 {option: 'Not much at all'},
@@ -72,15 +72,15 @@ const initialState = {
                 
             ]
         },
-        { // independence
-            id: 'independence',
-            question: 'Will your dog spend much time alone on daily basis?',
+        { // barking
+            id: 'barking',
+            question: 'Do you mind if your dog is barking?',
             options: [
-                {option: 'It will be with someone most of the time'},
-                {option: 'Around 4 hours'},
-                {option: 'Around 6 hours'},
-                {option: 'Until i get home from work (8hours)'},
-                {option: 'More than 8 hours'},
+                {option: 'Not at all'},
+                {option: 'Every now and then is okay'},
+                {option: 'I am okay with a little'},
+                {option: 'I prefer minimal barking'},
+                {option: 'As little barking as possible'},
             ]
         },
         { // trainability
@@ -98,18 +98,19 @@ const initialState = {
             id: 'grooming',
             question: 'How much time will you have for grooming?',
             options: [
-                {option: 'Not much time'},
-                {option: 'Every now and then'},
-                {option: 'Once or twice a week'},
+                {option: 'I will take it to the saloon'},
                 {option: 'Three or four times a week'},
+                {option: 'Once or twice a week'},
+                {option: 'Every now and then'},
                 {option: 'Daily grooming'},
+                
             ]
         },
         { // shedding
             id: 'shedding',
             question: 'How much shedding are you okay with?',
             options: [
-                {option: 'Not that important'},
+                {option: 'As little as dogly possible'},
                 {option: 'Minimal shedding'},
                 {option: 'Some shedding is okay'},
                 {option: 'Shedding is okay'},
@@ -118,7 +119,45 @@ const initialState = {
         }
     ],
 
-    answers: []
+    answers: [
+        /*
+        {
+            id: 'size',
+            answer: 3
+        },
+        {
+            id: 'energy',
+            answer: 3
+        },
+        {
+            id: 'good_with_children',
+            answer: 2
+        },
+        {
+            id: 'good_with_strangers',
+            answer: 2
+        },
+        {
+            id: 'playfulness',
+            answer: 2
+        },
+        {
+            id: 'independence',
+            answer: 4
+        },
+        {
+            id: 'trainability',
+            answer: 3
+        },
+        {
+            id: 'grooming',
+            answer: 2
+        },
+        {
+            id: 'shedding',
+            answer: 1
+        }, */
+    ]
 }
 
 export const quizSlice = createSlice({

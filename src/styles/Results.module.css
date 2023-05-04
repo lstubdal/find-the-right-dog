@@ -1,0 +1,28 @@
+.results {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.results__container {
+    display: flex;
+    margin-top: 80px;
+}
+
+.results__header {
+    font-size: 3em;
+    font-family: var(--second-font);
+    color: var(--second);
+    padding: 50px 30px 10px 30px;
+}
+
+.results__description {
+    font-size: 1.2em;
+    font-family: var(--main-font);
+    color: var(--second);
+    text-align: center;
+    padding: 5px;
+}
