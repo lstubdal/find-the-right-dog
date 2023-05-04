@@ -8,7 +8,9 @@
     font-size: 5em;
     font-family: var(--second-font);
     color: var(--second);
-    padding-bottom: 60px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--second);
+    margin-bottom: 50px;
   }
   
   .allBreeds__grid {
