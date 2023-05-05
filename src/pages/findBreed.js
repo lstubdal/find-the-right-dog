@@ -94,7 +94,7 @@ export default function FindBreed() {
 
                 {errorMessage && <p style={{ color: 'darkred' }}>{errorMessage}</p>}
 
-                <div>
+                <div className={styles.quiz__buttons}>
                     <button className={styles.quiz__buttonBack} onClick={() => dispatch(decreaseIndex())} aria-label="go back to previous question">Back</button>
                     <button className={styles.quiz__button} onClick={() => checkInputFields() === false ? '' : dispatch(increaseIndex())} aria-label="next question">Next</button>
                 </div>

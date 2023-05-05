@@ -54,6 +54,10 @@
     flex-direction: column;
 }
 
+.quiz__buttons {
+    display: flex;
+}
+
 .quiz__button, .quiz__buttonBack {
     font-size: 1.7em;
     padding: 3px 35px;
