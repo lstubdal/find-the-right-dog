@@ -11,8 +11,14 @@ export default function Results() {
     const [errorMessage, setErrorMessage] = useState(null)
     const allBreeds = useSelector((state) => state.fetchedData.data); // access all dogbreeds froms store
     const answers = useSelector((state) => state.quiz.answers)        // access answers from quiz saved in store
+    const tempAnswers = useSelector((state) => state.quiz.tempAnswers) 
     let filteredResult = []
     
+    // avoid crash for prerendering when deployment
+    if (answers.length === 0) {
+        answers = tempAnswers
+    }
+
     // filter by size
     const size = filterSpecification.bySize(answers[0].answer)
     filteredResult = allBreeds.filter(dog => dog.max_weight_male >= size[0] && dog.max_weight_male <= size[1]);
