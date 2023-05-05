@@ -10,7 +10,7 @@ import styles from "@component/styles/AllBreeds.module.css"
 export default function Results() {
     const [errorMessage, setErrorMessage] = useState(null)
     const allBreeds = useSelector((state) => state.fetchedData.data); // access all dogbreeds froms store
-    const answers = useSelector((state) => state.quiz.answers)        // access answers from quiz saved in store
+    let answers = useSelector((state) => state.quiz.answers)        // access answers from quiz saved in store
     const tempAnswers = useSelector((state) => state.quiz.tempAnswers) 
     let filteredResult = []
     
