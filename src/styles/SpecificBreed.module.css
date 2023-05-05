@@ -76,5 +76,24 @@
 }
 
 @media screen and (max-width: 800px) {
-    
+    .info__description {
+        font-size: 1.3em;
+    }
+
+    .info__traits {
+        flex-direction: column;
+        font-size: 1em;
+    }
+
+    .info__details > p {
+        font-size: 1.2em;
+    }
+
+    .info__details {
+        padding: 20px 10px;
+    }
+
+    .dog__img {
+        width: 80%;
+    } 
 }
