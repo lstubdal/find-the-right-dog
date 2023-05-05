@@ -5,9 +5,6 @@ import { toggle } from '../../slices/menuSlice'
 export default function CloseIcon() {
     const displayStatus = useSelector((state) => state.menu.value) // access variable in menuslice
     const dispatch = useDispatch() 
-    console.log('---STATUS---CLOSE', displayStatus)
-
-    
 
     return (
         <button className="sidebar__close" onClick={() => dispatch(toggle())} aria-label="toggle menu">

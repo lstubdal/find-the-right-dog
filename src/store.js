@@ -11,7 +11,6 @@ const fetchData = () => async (dispatch) => {
   const url = 'https://gist.githubusercontent.com/lstubdal/7c7161c4779b0fc49ffe81414f4c8854/raw/5d1ae39d9bbb6591cb9abb71e3dd290ec13c651f/dogbreeds.json'
   const response = await fetch(url);
   const data = await response.json();
-  console.log('fetched from store')
   dispatch(setData(data));
 };
 

@@ -95,11 +95,10 @@ export async function getStaticPaths() {
         }
     }))
 
-    return { paths, fallback: true } // whats the difference
+    return { paths, fallback: true } 
 }
 
 export async function getStaticProps({ params }) {
-    console.log('params', params)
     const url = `https://api.api-ninjas.com/v1/dogs?name=${params.specificBreed}`
     const response = await fetch(url, {
         headers: {
