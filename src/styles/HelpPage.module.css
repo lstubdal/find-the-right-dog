@@ -1,0 +1,57 @@
+.helpPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.helpPage__title {
+    font-size: 4em;
+    font-family: var(--second-font);
+    color: var(--mediumDark);
+    padding: 60px 0px 100px 0px;
+}
+
+.helpPage__content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: var(--mediumDark);
+}
+
+.helpPage__contentItem {
+    width: 50%;
+}
+
+.helpPage__contentParagraph {
+    width: 50%;
+    font-family: var(--main-font);
+    color: var(--light);
+    font-size: 2em;
+    padding: 30px 40px;
+}
+
+@media screen and (max-width: 800px) {
+    .helpPage__content {
+        flex-direction: column;
+    }
+
+    .helpPage__title {
+        font-size: 3em;
+    }
+
+    .helpPage__contentItem {
+        width: 100%;
+    }
+
+    .helpPage__contentParagraph {
+        width: 100%;
+        font-family: var(--main-font);
+        color: var(--light);
+        font-size: 1.5em;
+        padding: 90px 50px;
+    }
+    
+  }
+
