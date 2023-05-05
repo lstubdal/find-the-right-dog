@@ -19,8 +19,8 @@ const SpecificBreed = ({ specificBreed })  => {
         <div className={styles.specificBreed}>
            <Header />
             <div className={styles.dog}>
-                <img className={styles.dog__img} src={`${specificBreed[0].image_link}`} alt={`$specificBreed[0].name`} />
                 <h3 className={styles.dog__name}>{specificBreed[0].name}</h3>
+                <img className={styles.dog__img} src={`${specificBreed[0].image_link}`} alt={`$specificBreed[0].name`} />
 
                 <section className={styles.info}>
                     <div className={styles.info__details}>
@@ -49,11 +49,13 @@ const SpecificBreed = ({ specificBreed })  => {
                         <p>M: {specificBreed[0].min_weight_male}kg - {specificBreed[0].max_weight_male}kg</p>
                     </div>
                 </section>
-
-                <p className={styles.dog__description}>description (bred for also) from another api</p>
                 
-                <p className={styles.info}>More information about {specificBreed[0].name}, shown on a scale where 0 is the lowest and 5 is the highest</p>
-                <section className={styles.info}>
+                <div className={styles.info__description}>
+                    <p>More information about {specificBreed[0].name},</p>
+                    <p>shown on a scale where 0 is the lowest and 5 is the highes</p>
+                </div>
+                
+                <section className={styles.info__traits}>
                     <div className={styles.info__detailsItem}>
                         <h4>PERSONALITY TRAITS</h4>
                         <p>Energy: {specificBreed[0].energy}</p>

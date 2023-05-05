@@ -6,6 +6,7 @@
   
 .dog {
     font-family: var(--main-font);
+    margin-bottom: 50px;
 }
   
 .dog__img {
@@ -17,13 +18,7 @@
     font-size: 4em;
     color: var(--dark);
     font-family: var(--second-font);
-    padding: 40px;
-}
-  
-.dog__description {
-    color: var(--dark);
-    font-size: 1.8em;
-    padding: 50px;
+    padding: 20px 40px;
 }
   
 .dog__moreInfo {
@@ -31,8 +26,16 @@
     color: var(--second);
 }
   
-.info, .info__details, .info__detailsItem {
+.info, .info__details, .info__detailsItem, .info__traits {
     display: flex;
+}
+
+.info__description {
+    font-size: 1.5em;
+    font-weight: 800;
+    font-family: var(--second-font);
+    text-align: center;
+    padding: 50px 30px 30px 30px;
 }
 
 .info__details {
@@ -56,7 +59,20 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 20px 50px;
+}
+
+.info__detailsItem p {
+    padding: 5px;
+}
+
+.info__traits {
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    font-size: 1.5em;
+    background-color: var(--second);
+    color: var(--dark);
 }
 
 @media screen and (max-width: 800px) {
