@@ -12,7 +12,7 @@ export default function Hamburger() {
         // hide menu if hamburger not clicked
         <div className="hamburger">
             {displayStatus === false ? (
-                <button onClick={() => dispatch(toggle())}>
+                <button onClick={() => dispatch(toggle())} aria-label="toggle menu">
                 <HamburgerIcon />
             </button>
             ) : <Sidebar /> 

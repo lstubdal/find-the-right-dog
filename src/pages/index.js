@@ -12,7 +12,7 @@ export default function Frontpage() {
         <h1 className={styles.frontpage__title}>Find the Best Dog <br/> Breed for You!</h1>
         
           <Link key="all-breeds" href="/findBreed" className={styles.frontpage__link}>
-            <button className={styles.frontpage__linkButton}>Let's go</button>
+            <button className={styles.frontpage__linkButton} aria-label="go to breedselector">Let's go</button>
           </Link>
       </section>
     </div>
