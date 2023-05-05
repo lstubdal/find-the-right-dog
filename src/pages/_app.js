@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import "@component/styles/globals.css";
 import { Provider } from "react-redux";
