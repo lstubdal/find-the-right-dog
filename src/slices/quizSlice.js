@@ -99,65 +99,26 @@ const initialState = {
             question: 'How much time will you have for grooming?',
             options: [
                 {option: 'I will take it to the saloon'},
+                {option: 'Daily grooming'},
                 {option: 'Three or four times a week'},
                 {option: 'Once or twice a week'},
                 {option: 'Every now and then'},
-                {option: 'Daily grooming'},
-                
             ]
         },
         { // shedding
             id: 'shedding',
             question: 'How much shedding are you okay with?',
             options: [
-                {option: 'As little as dogly possible'},
-                {option: 'Minimal shedding'},
-                {option: 'Some shedding is okay'},
-                {option: 'Shedding is okay'},
                 {option: 'A lot of shedding is okay'},
+                {option: 'Shedding is okay'},
+                {option: 'Some shedding is okay'},
+                {option: 'Minimal shedding'},
+                {option: 'As little as dogly possible'},
             ]
         }
     ],
 
-    answers: [
-        /*
-        {
-            id: 'size',
-            answer: 3
-        },
-        {
-            id: 'energy',
-            answer: 3
-        },
-        {
-            id: 'good_with_children',
-            answer: 2
-        },
-        {
-            id: 'good_with_strangers',
-            answer: 2
-        },
-        {
-            id: 'playfulness',
-            answer: 2
-        },
-        {
-            id: 'independence',
-            answer: 4
-        },
-        {
-            id: 'trainability',
-            answer: 3
-        },
-        {
-            id: 'grooming',
-            answer: 2
-        },
-        {
-            id: 'shedding',
-            answer: 1
-        }, */
-    ]
+    answers: []
 }
 
 export const quizSlice = createSlice({
