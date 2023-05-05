@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Header from '../components/header/header';
 
 export default function Frontpage() {
-
   return (
     <div className={styles.frontpage} style={{ backgroundImage: 'url(/images/background-frontpage.png)' }}>
       <Header />
