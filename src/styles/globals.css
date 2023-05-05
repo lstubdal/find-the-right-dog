@@ -13,7 +13,8 @@
     --highlight: #DD7D70;
     --dark:  #373737;
     --light: white;
-    --overlay: rgba(0,0,0,0.5);
+    --faded: rgba(255, 255, 255, 0.284);
+    --overlay: rgba(0,0,0,0.5)
 }
 
 /* reset */
@@ -94,6 +95,35 @@ label {
   font-size: 1.7em;
   align-items: center;
   padding: 20px 35px;
+}
+
+.Collapsible {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--main-font);
+  width: 40%;
+  padding: 2px;
+}
+
+.Collapsible__trigger {
+  font-size: 1.5em;
+  background-color: var(--light);
+  padding:  15px 30px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  cursor: pointer;
+}
+
+.Collapsible__trigger:hover {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.Collapsible__contentInner {
+  background-color: var(--dark);
+  color: var(--light);
+  padding: 30px;
+  line-height: 1.5;
 }
 
 .loading {

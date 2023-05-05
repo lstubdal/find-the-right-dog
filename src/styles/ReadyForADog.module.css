@@ -1,0 +1,46 @@
+.rfad {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.rfad__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 600px 20px 0px;
+}
+
+.rfad__title h2 {
+    height: 13vh;
+    font-family: var(--second-font);
+    color: var(--light);
+    font-size: 6.3em;
+}
+
+.rfad__article {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 30px;
+    background-color: var(--second);
+}
+
+.rfad__article h3 {
+    font-family: var(--main-font);
+    font-size: 3em;
+    padding: 50px;
+}
+
+.rfad__source {
+    padding: 15px;
+    font-family: var(--main-font);
+    color: var(--overlay);
+}
+
