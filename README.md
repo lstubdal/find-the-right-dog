@@ -12,6 +12,7 @@ Future development (if I had more time)
  - let user filter in a sidebar at 'all breeds' page
  - show results of other dogbreeds that was close to users selections
  - show only 20 dogs at the time per page
+ - Update to Image tags instead of img
  
  Sources:
  For access to all dogbreed names: https://thedogapi.com/ 
