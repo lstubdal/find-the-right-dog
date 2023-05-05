@@ -1,18 +1,18 @@
-import Header from '../../components/header/header';
-import React from 'react';
-import { useRouter } from 'next/router';
-import styles from '@component/styles/SpecificBreed.module.css';
+import Header from "../../components/header/header";
+import React from "react";
+import { useRouter } from "next/router";
+import styles from "@component/styles/SpecificBreed.module.css";
 
-import Height from '@component/components/dogInformation/height';
-import Lifespan from '@component/components/dogInformation/lifespan';
-import Weight from '@component/components/dogInformation/weight';
+import Height from "@component/components/dogInformation/height";
+import Lifespan from "@component/components/dogInformation/lifespan";
+import Weight from "@component/components/dogInformation/weight";
 
 const SpecificBreed = ({ specificBreed })  => {
 
     // avoid website to render data before api fetch is complete
     const router = useRouter() // access router hook
     if (router.isFallback) {
-        return <div className='loading'><p>LOADING...</p></div>
+        return <div className="loading"><p>LOADING...</p></div>
     }
 
     return (
@@ -85,7 +85,7 @@ const SpecificBreed = ({ specificBreed })  => {
 export default SpecificBreed;
 
 export async function getStaticPaths() {
-    const url = 'https://gist.githubusercontent.com/lstubdal/7c7161c4779b0fc49ffe81414f4c8854/raw/5d1ae39d9bbb6591cb9abb71e3dd290ec13c651f/dogbreeds.json';
+    const url = "https://gist.githubusercontent.com/lstubdal/7c7161c4779b0fc49ffe81414f4c8854/raw/5d1ae39d9bbb6591cb9abb71e3dd290ec13c651f/dogbreeds.json";
     const response = await fetch(url);
     const allBreeds = await response.json()
 

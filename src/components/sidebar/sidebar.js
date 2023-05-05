@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
-import CloseIcon from './closeIcon'
-import { useSelector, useDispatch } from 'react-redux';
-import { toggle } from  '../../slices/menuSlice';
-import Link from 'next/link'; // create client-side navigation between pages without a full page reload. This component prefetches pages in the background to provide fast navigation.
+import CloseIcon from "./closeIcon"
+import { useSelector, useDispatch } from "react-redux";
+import { toggle } from  "../../slices/menuSlice";
+import Link from "next/link"; // create client-side navigation between pages without a full page reload. This component prefetches pages in the background to provide fast navigation.
 
 export default function Menu() {
 
@@ -19,7 +19,7 @@ export default function Menu() {
         if (ref.current) { 
             
             // and user clicked outside of menu
-            if (event.target.className !== 'sidebar' && event.target.className !== 'sidebar__link') {
+            if (event.target.className !== "sidebar" && event.target.className !== "sidebar__link") {
 
                 // hide menu again
                 dispatch(toggle())
@@ -28,9 +28,9 @@ export default function Menu() {
     }
 
     useEffect(() => {
-        document.addEventListener('click', handleClickOutside, true);
+        document.addEventListener("click", handleClickOutside, true);
         return () => {
-            document.removeEventListener('click', handleClickOutside, true);
+            document.removeEventListener("click", handleClickOutside, true);
         };
     });
 

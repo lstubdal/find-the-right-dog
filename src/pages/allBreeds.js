@@ -1,8 +1,8 @@
 import React from "react";
-import { useSelector } from 'react-redux';
-import Link from 'next/link';
-import styles from '@component/styles/AllBreeds.module.css';
-import Header from '../components/header/header';
+import { useSelector } from "react-redux";
+import Link from "next/link";
+import styles from "@component/styles/AllBreeds.module.css";
+import Header from "../components/header/header";
 
 export default function AllBreeds() {
   const allBreeds = useSelector((state) => state.fetchedData.data) // access all breeds from store

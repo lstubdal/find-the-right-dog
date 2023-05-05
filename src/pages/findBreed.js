@@ -1,9 +1,9 @@
 import React from "react";
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from "react-redux";
 import { decreaseIndex, increaseIndex, updateAnswer } from "@component/slices/quizSlice";
-import { useState } from 'react';
-import styles from '@component/styles/FindBreed.module.css';
-import Header from '../components/header/header';
+import { useState } from "react";
+import styles from "@component/styles/FindBreed.module.css";
+import Header from "../components/header/header";
 
 export default function FindBreed() {
      // make reducers accessbible to current component
@@ -92,11 +92,11 @@ export default function FindBreed() {
                     
                 </div>
 
-                {errorMessage && <p style={{ color: 'darkred' }}>{errorMessage}</p>}
+                {errorMessage && <p style={{ color: "darkred" }}>{errorMessage}</p>}
 
                 <div className={styles.quiz__buttons}>
                     <button className={styles.quiz__buttonBack} onClick={() => dispatch(decreaseIndex())} aria-label="go back to previous question">Back</button>
-                    <button className={styles.quiz__button} onClick={() => checkInputFields() === false ? '' : dispatch(increaseIndex())} aria-label="next question">Next</button>
+                    <button className={styles.quiz__button} onClick={() => checkInputFields() === false ? "" : dispatch(increaseIndex())} aria-label="next question">Next</button>
                 </div>
 
             </section>

@@ -1,5 +1,4 @@
 import React from "react";
-import styles from '@component/styles/SpecificBreed.module.css';
 
 export default function Lifespan() {
     return (

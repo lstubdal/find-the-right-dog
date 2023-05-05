@@ -1,11 +1,11 @@
 /* import fonts */
-@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Philosopher&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600;700;800;900&display=swap");
 
 :root {
     /* font */
-    --main-font: 'Raleway', sans-serif;
-    --second-font: 'Philosopher', sans-serif;
+    --main-font: "Raleway", sans-serif;
+    --second-font: "Philosopher", sans-serif;
 
     /* colors */
     --main: #A7B9CE;
@@ -84,7 +84,7 @@ input[type="checkbox"]::before {
   margin-right: 10px;
 }
 
-/* Style the custom checkbox when it's checked */
+/* Style the custom checkbox when it"s checked */
 input[type="checkbox"]:checked::before {
   background-color: var(--second);
   border: 2px solid var(--light);
@@ -134,7 +134,7 @@ label {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url('/images/loading.jpg');
+  background-image: url("/images/loading.jpg");
   background-size: cover;
   padding-bottom: 30px;
   font-size: 5em;

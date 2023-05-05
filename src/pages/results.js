@@ -1,11 +1,11 @@
 import React from "react";
 import * as filterSpecification  from "../filterFunctions"
-import { useState } from 'react';
-import { useSelector } from 'react-redux';
-import Header from '../components/header/header';
-import Link from 'next/link';
-import stylesResults from '@component/styles/Results.module.css';
-import styles from '@component/styles/AllBreeds.module.css'
+import { useState } from "react";
+import { useSelector } from "react-redux";
+import Header from "../components/header/header";
+import Link from "next/link";
+import stylesResults from "@component/styles/Results.module.css";
+import styles from "@component/styles/AllBreeds.module.css"
 
 export default function Results() {
     const [errorMessage, setErrorMessage] = useState(null)

@@ -1,11 +1,11 @@
-import Header from '../components/header/header';
-import styles from '@component/styles/ReadyForADog.module.css';
-import Arrow from '../components/pageArrow';
-import Collapsible from 'react-collapsible';
+import Header from "../components/header/header";
+import styles from "@component/styles/ReadyForADog.module.css";
+import Arrow from "../components/pageArrow";
+import Collapsible from "react-collapsible";
 
 export default function ReadyForADog() {
  return (
-  <div  className={styles.rfad} style={{ backgroundImage: 'url(/images/background2.png)' }}>
+  <div  className={styles.rfad} style={{ backgroundImage: "url(/images/background2.png)" }}>
     <Header />
     <div className={styles.rfad__title}>
       <h2>Am I</h2>

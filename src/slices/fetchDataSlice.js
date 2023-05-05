@@ -1,11 +1,11 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     data: []
 }
 
 const fetchDataSlice = createSlice({
-  name: 'fetchedData',
+  name: "fetchedData",
   initialState,
   reducers: {
     setData: (state, action) => {
