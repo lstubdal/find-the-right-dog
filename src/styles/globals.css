@@ -108,7 +108,7 @@ label {
 .Collapsible__trigger {
   font-size: 1.5em;
   background-color: var(--light);
-  padding:  15px 30px;
+  padding:  18px 30px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   cursor: pointer;
@@ -198,11 +198,20 @@ label {
 }
 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   label {
     font-size: 1.3em;
     padding: 10px 35px;
+  }
 
+  .Collapsible {
+    width: 80%;
+    padding: 2px;
+  }
+
+  .Collapsible__trigger {
+    font-size: 1.7em;
+    padding:  23px 30px;
   }
 }
 
