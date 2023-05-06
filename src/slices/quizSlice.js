@@ -118,45 +118,7 @@ const initialState = {
         }
     ],
 
-    answers: [],
-    ansers: [
-        {
-            id: 'size',
-            answer: 3
-        },
-        {
-            id: 'energy',
-            answer: 3
-        },
-        {
-            id: 'good_with_children',
-            answer: 3
-        },
-        {
-            id: 'good_with_other_dogs',
-            answer: 3
-        },
-        {
-            id: 'good_with_strangers',
-            answer: 3
-        },
-        {
-            id: 'playfulness',
-            answer: 3
-        },
-        {
-            id: 'barking',
-            answer: 3
-        },
-        {
-            id: 'grooming',
-            answer: 3
-        },
-        {
-            id: 'shedding',
-            answer: 3
-        },
-    ]
+    answers: []
 }
 
 export const quizSlice = createSlice({
